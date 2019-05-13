@@ -161,9 +161,14 @@ class Menu extends React.Component {
     const shadowMenuContainerStyle = {
       opacity: opacityAnimation,
       transform: transforms,
-      left,
       top,
     };
+    
+    if (I18nManager.isRTL) {
+      shadowMenuContainerStyle.right = left
+    } else {
+      shadowMenuContainerStyle.left = left
+    }
 
     const { menuState } = this.state;
     const animationStarted = menuState === STATES.ANIMATING;
