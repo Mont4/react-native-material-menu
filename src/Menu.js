@@ -11,6 +11,7 @@ import {
   TouchableWithoutFeedback,
   View,
   ViewPropTypes,
+  I18nManager
 } from 'react-native';
 
 const STATES = {
